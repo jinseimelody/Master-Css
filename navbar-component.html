@@ -21,7 +21,6 @@
             flex-direction: row;
             align-items: center;
             padding: 20px 0;
-            border:1px dashed black;
         }
 
         .nav>* {
@@ -45,20 +44,20 @@
             list-style: none;
         }
 
-        .nav .nav__content div:first-child{
+        .nav .nav__content div:first-child {
             font-weight: 700;
             vertical-align: center;
         }
 
-        .nav .nav__content a{
+        .nav .nav__content a {
             text-decoration: none;
-            padding-top:5px;
-            padding-bottom:5px;
-            padding-left: 20px; 
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 20px;
             color: initial;
         }
 
-        .nav .nav__content a:hover{
+        .nav .nav__content a:hover {
             color: #00a2c7 !important;
         }
 
@@ -66,6 +65,48 @@
             border-right: 1px solid rgba(46, 62, 72, 0.12);
             color: #00a2c7 !important;
             padding-right: 20px;
+        }
+
+        /* jumbotron */
+        .jumbotron {
+            height: 500px;
+            background: black;
+            color: #ffffff;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .jumbotron >*{
+            margin: 8px;
+        }
+
+        .jumbotron >*:first-child{
+            margin-top:0;
+        }
+
+        .jumbotron >*:last-child{
+            margin-bottom: 0;
+        }
+
+        .jumbotron .jumbotron__title {
+            font-size: 45px;
+        }
+
+        .jumbotron .jumbotron__subtitle {
+            font-size: 20px;
+        }
+
+        .jumbotron .jumbotron__button {
+            background-color: #f13a59;
+            color: #ffffff;
+            font-size: initial;
+            padding:10px 100px;
+            border-radius: .25rem;
+            text-decoration: none;
+            margin-top:45px;
         }
     </style>
 </head>
@@ -82,12 +123,24 @@
                 <a href="#">Start a new group</a>
             </div>
             <div>
-                <a href="#">Login</a>
+                <a href="#">Log in</a>
             </div>
             <div>
                 <a href="#">Sign up</a>
             </div>
         </div>
+    </div>
+
+    <div class="jumbotron">
+        <div class="jumbotron__title">
+            The real world is calling
+        </div>
+        <div class="jumbotron__subtitle">
+            Join a local group to meet people, try something new, or do more of what you love.
+        </div>
+        <a href="#" class="jumbotron__button">
+            Join Meetup
+        </a>
     </div>
 </body>
 

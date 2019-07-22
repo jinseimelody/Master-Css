@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Meetup nav</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <style>
+        .border {
+            border: 1px dashed black;
+        }
+
         body {
             padding: 0;
             margin: 0;
@@ -69,7 +75,7 @@
 
         /* jumbotron */
         .jumbotron {
-            height: 500px;
+            height: 460px;
             background: black;
             color: #ffffff;
             font-weight: 700;
@@ -77,17 +83,22 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            text-align: center;
+            /* background-image: url('https://www.meetup.com/mu_static/en-US/still_5.5ba4b9cf.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;   */
         }
 
-        .jumbotron >*{
+        .jumbotron>* {
             margin: 8px;
         }
 
-        .jumbotron >*:first-child{
-            margin-top:0;
+        .jumbotron>*:first-child {
+            margin-top: 0;
         }
 
-        .jumbotron >*:last-child{
+        .jumbotron>*:last-child {
             margin-bottom: 0;
         }
 
@@ -103,10 +114,116 @@
             background-color: #f13a59;
             color: #ffffff;
             font-size: initial;
-            padding:10px 100px;
+            padding: 10px 100px;
             border-radius: .25rem;
             text-decoration: none;
-            margin-top:45px;
+            margin-top: 45px;
+        }
+
+        .btn-default {
+            background: rgb(246, 247, 248);
+            border: 1px solid rgba(46, 62, 72, 0.3);
+            border-radius: .3rem;
+            color: rgb(88, 88, 88);
+            padding: 8px;
+            font-weight: 700;
+            transition: all .3s;
+        }
+
+        .btn-default:hover {
+            border: 1px solid rgba(46, 62, 72, 0.8);
+            outline: none;
+        }
+
+        .tags {
+            display: flex;
+            flex-direction: row;
+            padding: 20px 0;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid rgba(46, 62, 72, 0.12);
+        }
+
+        .tags * {
+            margin: 0 10px;
+        }
+
+        .main {
+            padding: 0 10%;
+        }
+
+        .topic {
+            margin-top: 40px;
+        }
+
+        .topic .topic__title {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+        }
+
+        .topic .title__text {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .topic .title__text .title {
+            font-size: 25px;
+            font-weight: 700;
+            color: black;
+        }
+
+        .topic .title__link a {
+            text-decoration: none;
+            color: #00a2c7 !important;
+            font-weight: 700;
+        }
+
+        .slide {
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .eventcard {
+            width: 30%;
+            border-radius: .5rem;
+            border: 1px solid rgba(46, 62, 72, 0.12);
+            box-shadow: 0 0 2px 0 rgba(46, 62, 72, .12), 0 2px 4px 0 rgba(46, 62, 72, .12);
+            padding: 15px;
+        }
+
+        .eventcard .eventcard__body>* {
+            margin-bottom: 15px;
+        }
+
+        .eventcard .eventcard__body .time {
+            color: #00a2c7;
+            font-weight: 500;
+        }
+
+        .eventcard .eventcard__body .name {
+            color: black;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .eventcard .eventcard__body .group {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .eventcard .eventcard__footer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .eventcard .eventcard__footer .count {
+            flex-grow: 1;
         }
     </style>
 </head>
@@ -132,6 +249,7 @@
     </div>
 
     <div class="jumbotron">
+        <video src=""></video>
         <div class="jumbotron__title">
             The real world is calling
         </div>
@@ -141,6 +259,93 @@
         <a href="#" class="jumbotron__button">
             Join Meetup
         </a>
+    </div>
+
+    <div class="tags">
+        <button class="btn-default">Join a movement</button>
+        <button class="btn-default">Learn to cook</button>
+        <button class="btn-default">Train for a marathon</button>
+        <button class="btn-default">Build mobile app</button>
+        <button class="btn-default">Hike a mountain</button>
+        <button class="btn-default">Practice a language</button>
+    </div>
+
+    <div class="main">
+        <div class="topic">
+            <div class="topic__title">
+                <div class="title__text">
+                    <div class="title">Events near you</div>
+                    <div class="sub-title">
+                        See what's happening soon in your area.
+                    </div>
+                </div>
+                <div class="title__link">
+                    <a href="#">See all</a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="eventcard">
+                    <div class="eventcard__body">
+                        <div class="time">
+                            TUE, JUN 23, 1:00 PM
+                        </div>
+                        <div class="name">
+                            Vietnam Singapore Connecting
+                        </div>
+                        <div class="group">
+                            Sg Banking and Finance Network (Powered by SBN Group)
+                        </div>
+                        <div class="place">
+                            <i class="fa fa-book"></i>Le Méridien Saigon
+                        </div>
+                    </div>
+                    <div class="eventcard__footer">
+                        <span class="count">24 attendees</span>
+                        <button class="btn-default">Attend</button>
+                    </div>
+                </div>
+                <div class="eventcard">
+                    <div class="eventcard__body">
+                        <div class="time">
+                            TUE, JUN 23, 1:00 PM
+                        </div>
+                        <div class="name">
+                            Vietnam Singapore Connecting
+                        </div>
+                        <div class="group">
+                            Sg Banking and Finance Network (Powered by SBN Group)
+                        </div>
+                        <div class="place">
+                            <i class="fa fa-book"></i>Le Méridien Saigon
+                        </div>
+                    </div>
+                    <div class="eventcard__footer">
+                        <span class="count">24 attendees</span>
+                        <button class="btn-default">Attend</button>
+                    </div>
+                </div>
+                <div class="eventcard">
+                    <div class="eventcard__body">
+                        <div class="time">
+                            TUE, JUN 23, 1:00 PM
+                        </div>
+                        <div class="name">
+                            Vietnam Singapore Connecting
+                        </div>
+                        <div class="group">
+                            Sg Banking and Finance Network (Powered by SBN Group)
+                        </div>
+                        <div class="place">
+                            <i class="fa fa-book"></i>Le Méridien Saigon
+                        </div>
+                    </div>
+                    <div class="eventcard__footer">
+                        <span class="count">24 attendees</span>
+                        <button class="btn-default">Attend</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

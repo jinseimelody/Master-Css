@@ -188,7 +188,7 @@
         }
 
         .eventcard {
-            width: 30%;
+            width: 29%;
             border-radius: .5rem;
             border: 1px solid rgba(46, 62, 72, 0.12);
             box-shadow: 0 0 2px 0 rgba(46, 62, 72, .12), 0 2px 4px 0 rgba(46, 62, 72, .12);
@@ -225,6 +225,51 @@
         .eventcard .eventcard__footer .count {
             flex-grow: 1;
         }
+
+        .groupcard {
+            width: 24%;
+            border-radius: .5rem;
+            border: 1px solid rgba(46, 62, 72, 0.12);
+            box-shadow: 0 0 2px 0 rgba(46, 62, 72, .12), 0 2px 4px 0 rgba(46, 62, 72, .12);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .groupcard .groupcard__header {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .groupcard .groupcard__header img {
+            display: block;
+            width: 100%;
+        }
+
+        .groupcard .groupcard__body {
+            padding: 15px;
+        }
+
+        .groupcard .groupcard__body .name {
+            font-size: 25px;
+            font-weight: 700;
+            color: black;
+        }
+
+        .groupcard .groupcard__body .title {
+            font-size: 20px;
+            font-weight: 500;
+            color: #888888;
+        }
+
+        .groupcard .groupcard__footer {
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            justify-self: end;
+        }
     </style>
 </head>
 
@@ -249,7 +294,6 @@
     </div>
 
     <div class="jumbotron">
-        <video src=""></video>
         <div class="jumbotron__title">
             The real world is calling
         </div>
@@ -345,6 +389,108 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="topic">
+            <div class="topic__title">
+                <div class="title__text">
+                    <div class="title">Groups near you</div>
+                    <div class="sub-title">
+                        Find groups that get together to do the things they love.
+                    </div>
+                </div>
+                <div class="title__link">
+                    <a href="#">See all</a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="groupcard">
+                    <div class="groupcard__header">
+                        <img src="https://secure.meetupstatic.com/photos/event/4/3/4/5/600_476117221.jpeg" alt="">
+                    </div>
+                    <div class="groupcard__body">
+                        <div class="title">
+                            TECH
+                        </div>
+                        <div class="name">
+                            Google Developer Group Vietnam
+                        </div>
+                        <div class="notification">
+                            3 upcoming events
+                        </div>
+                    </div>
+                    <div class="groupcard__footer">
+                        868 GDG-ers
+                    </div>
+                </div>
+                <div class="groupcard">
+                    <div class="groupcard__header">
+                        <img src="https://secure.meetupstatic.com/photos/event/3/1/3/600_463500787.jpeg" alt="">
+                    </div>
+                    <div class="groupcard__body">
+                        <div class="title">
+                            TECH
+                        </div>
+                        <div class="name">
+                            Google Developer Group Vietnam
+                        </div>
+                        <div class="notification">
+                            3 upcoming events
+                        </div>
+                    </div>
+                    <div class="groupcard__footer">
+                        868 GDG-ers
+                    </div>
+                </div>
+                <div class="groupcard">
+                    <div class="groupcard__header">
+                        <img src="https://secure.meetupstatic.com/photos/event/3/1/3/600_463500787.jpeg" alt="">
+                    </div>
+                    <div class="groupcard__body">
+                        <div class="title">
+                            TECH
+                        </div>
+                        <div class="name">
+                            Google Developer Group Vietnam
+                        </div>
+                        <div class="notification">
+                            3 upcoming events
+                        </div>
+                    </div>
+                    <div class="groupcard__footer">
+                        868 GDG-ers
+                    </div>
+                </div>
+                <div class="groupcard">
+                    <div class="groupcard__header">
+                        <img src="https://secure.meetupstatic.com/photos/event/3/1/3/600_463500787.jpeg" alt="">
+                    </div>
+                    <div class="groupcard__body">
+                        <div class="title">
+                            TECH
+                        </div>
+                        <div class="name">
+                            Google Developer Group Vietnam
+                        </div>
+                        <div class="notification">
+                            3 upcoming events
+                        </div>
+                    </div>
+                    <div class="groupcard__footer">
+                        868 GDG-ers
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div class="topic">
+            <div class="topic__title">
+                <div class="title__text">
+                    <div class="title">Categories</div>
+                    <div class="sub-title">
+                        Browse groups by topics you're interested in.
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>
